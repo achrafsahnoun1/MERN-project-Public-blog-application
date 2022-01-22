@@ -1,0 +1,36 @@
+<div class="write">
+      <img class="writeImg"  alt="" />
+    <form class="writeForm">
+      <div class="writeFormGroup">
+        <label htmlFor="fileInput">
+          <i class="writeIcon fas fa-plus"></i>
+        </label>
+        
+        <input
+          type="file"
+          id="fileInput"
+
+          [ngStyle]="{'display': 'none'}"
+
+        />
+        <input
+          type="text"
+          placeholder="Title"
+          class="writeInput"
+          autoFocus={true}
+
+        />
+      </div>
+      <div class="writeFormGroup">
+        <textarea
+          placeholder="Tell your story..."
+          type="text"
+          class="writeInput"
+        > 
+        </textarea>
+      </div>
+      <button class="writeSubmit" type="submit">
+        Publish
+      </button>
+    </form>
+  </div>
