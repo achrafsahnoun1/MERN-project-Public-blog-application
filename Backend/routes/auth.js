@@ -22,7 +22,7 @@ router.post("/register",async(req,res)=>{
             process.env.jwtSecret,
             {expiresIn: 3600})
         res.status(200).json({token,others});
-    } catch{
+    } catch (err){
         res.status(500).json(err);
     }
 })
@@ -43,7 +43,7 @@ router.post("/login",async(req,res)=>{
             {expiresIn: 3600})
         res.status(200).json({token,others});
 
-    } catch{
+    } catch (err){
         res.status(500).json(err);
     }
 })
