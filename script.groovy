@@ -15,7 +15,7 @@ def buildFront() {
 
 def buildBack() {
     
-    dir ('../mern-app/backend/') { 
+    dir ('../mern-app/Backend/') { 
     sh 'npm install'
     echo "building of the backend part successful..."
     }
