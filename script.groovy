@@ -5,8 +5,9 @@ def buildJar() {
 def buildFront() { 
     sh 'pwd'
     dir ('../frontend') { 
+    sh 'rm -R package-lock.json'
     sh "npm install -g @angular/cli"
-    sh "npm start"
+    sh "npm install"
     echo "building of the frontend part successful ..."
     }
 } 
