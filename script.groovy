@@ -9,7 +9,7 @@ def buildImage() {
     //sh "docker login -u ${USER} -p ${PASS}"
     //sh 'docker push tsah007/bootcamp:jma-1.1'
     }
-} 
+//}
 
 def deployApp() {
     echo 'deploying the application...'
