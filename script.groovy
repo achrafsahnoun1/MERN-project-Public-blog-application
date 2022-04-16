@@ -23,14 +23,14 @@ def buildBack() {
 def testFront() {
     dir ('../mern-app/frontend/') { 
 
-    sh 'npm test'
+    sh 'node test'
     echo "testing of the frontend part successful ..."
     }
 } 
 
 def testBack() {
     dir ('../mern-app/Backend/') { 
-    sh 'npm test'
+    sh 'node test'
     echo "testing of the backend part successful..."
     }
 
