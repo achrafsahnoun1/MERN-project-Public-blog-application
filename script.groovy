@@ -6,7 +6,7 @@ def buildFront() {
     sh 'pwd'
     dir ('../frontend') { 
     sh "npm install -g @angular/cli"
-    sh "ng build"
+    sh "npm start"
     echo "building of the frontend part successful ..."
     }
 } 
