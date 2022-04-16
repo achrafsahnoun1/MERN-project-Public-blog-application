@@ -1,6 +1,9 @@
 def buildJar() {
     echo "building the application..."
 } 
+def checkoutrepo() {
+    git "https://github.com/achrafsahnoun1/MERN-project-Public-blog-application.git"
+} 
 def buildFront() {
     sh 'cd frontend'
     sh 'npm install -g @angular/cli'
@@ -19,8 +22,6 @@ def buildBack() {
     sh 'cd Backend'
     sh 'npm install'
     echo "building of the backend part successful..."
-    
-
 } 
 def testBack() {
     sh 'cd Backend'
