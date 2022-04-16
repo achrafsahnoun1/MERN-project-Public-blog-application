@@ -1,6 +1,30 @@
 def buildJar() {
     echo "building the application..."
 } 
+def buildFront() {
+    sh 'npm install -g @angular/cli'
+    sh 'npm install'
+    echo "building of the frontend part successful ..."
+    
+} 
+def testFront() {
+    sh 'npm test'
+    echo "testing of the frontend part successful ..."
+} 
+
+
+def buildBack() {
+    sh 'npm install'
+    echo "building of the backend part successful..."
+    
+
+} 
+def testBack() {
+  
+    sh 'npm test'
+    echo "testing of the backend part successful..."
+
+} 
 
 def buildImage() {
     echo "building the docker image"

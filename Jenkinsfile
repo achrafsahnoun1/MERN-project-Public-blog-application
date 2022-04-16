@@ -19,7 +19,22 @@ pipeline {
             steps {
                 script{
                     
-                    gv.buildJar()
+                    gv.buildFront()
+                    gv.buildBack()
+                    
+                    //gv.buildJar()
+                }
+            }
+        }
+        stage("test app") {
+           
+            steps {
+                script{
+                    
+                    gv.testFront()
+                    gv.testBack()
+                    
+                    //gv.buildJar()
                 }
             }
         }
