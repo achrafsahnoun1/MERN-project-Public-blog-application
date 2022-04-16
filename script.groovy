@@ -3,12 +3,12 @@ def buildJar() {
 } 
 
 def buildFront() { 
-    sh 'ls'
-    dir ('/frontend') { 
-    sh "npm install -g @angular/cli"
-    sh "npm install"
-    echo "building of the frontend part successful ..."
-    }
+    sh 'pwd'
+    //dir ('/frontend') { 
+    //sh "npm install -g @angular/cli"
+    //sh "npm install"
+    //echo "building of the frontend part successful ..."
+    //}
 } 
 def testFront() {
     sh 'cd frontend'
