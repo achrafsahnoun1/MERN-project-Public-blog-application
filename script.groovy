@@ -12,22 +12,27 @@ def buildFront() {
     echo "building of the frontend part successful ..."
     }
 } 
-def testFront() {
-    sh 'cd frontend'
-    sh 'npm test'
-    echo "testing of the frontend part successful ..."
-} 
-
 
 def buildBack() {
-    sh 'cd Backend'
+    
+    dir ('../mern-app/backend/') { 
     sh 'npm install'
     echo "building of the backend part successful..."
+    }
 } 
+def testFront() {
+    dir ('../mern-app/frontend/') { 
+
+    sh 'npm test'
+    echo "testing of the frontend part successful ..."
+    }
+} 
+
 def testBack() {
-    sh 'cd Backend'
+    dir ('../mern-app/backend/') { 
     sh 'npm test'
     echo "testing of the backend part successful..."
+    }
 
 } 
 
