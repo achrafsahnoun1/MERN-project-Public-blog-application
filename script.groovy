@@ -2,7 +2,8 @@ def buildJar() {
     echo "building the application..."
 } 
 
-def buildFront() {
+def buildFront() { 
+    sh 'ls'
     dir ('/frontend') { 
     sh "npm install -g @angular/cli"
     sh "npm install"
