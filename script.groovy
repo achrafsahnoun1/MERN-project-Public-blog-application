@@ -5,7 +5,6 @@ def buildJar() {
 def buildFront() { 
     sh 'pwd'
     dir ('../frontend') { 
-    sh 'rm -R package-lock.json'
     sh 'npm cache clean -force'
     sh "npm install"
     sh "npm install -g @angular/cli"
