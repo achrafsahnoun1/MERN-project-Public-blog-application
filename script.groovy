@@ -6,6 +6,7 @@ def buildFront() {
     sh 'pwd'
     dir ('../frontend') { 
     sh 'rm -R package-lock.json'
+    sh 'npm cache clean -force'
     sh "npm install -g @angular/cli"
     sh "npm install"
     echo "building of the frontend part successful ..."
