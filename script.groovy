@@ -22,8 +22,7 @@ def buildBack() {
 } 
 def testFront() {
     dir ('../mern-app/frontend/') { 
-    //sh 'npm test'
-    sh 'ng serve --host 0.0.0.0'
+    sh 'ng test'
     echo "testing of the frontend part successful ..."
     }
 } 
