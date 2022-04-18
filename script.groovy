@@ -29,7 +29,7 @@ def testFront() {
 
 def testBack() {
     dir ('../mern-app/Backend/') { 
-    sh 'node index.js'
+    //sh 'node index.js'
     echo "testing of the backend part successful..."
     }
 
