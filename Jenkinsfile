@@ -26,18 +26,7 @@ pipeline {
                 }
             }
         }
-        stage("test app") {
-           
-            steps {
-                script{
-                    
-                    gv.testFront()
-                    gv.testBack()
-                    
-                    //gv.buildJar()
-                }
-            }
-        }
+       
         stage("Building the image") {
             
             steps {

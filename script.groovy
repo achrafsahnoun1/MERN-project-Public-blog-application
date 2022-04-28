@@ -20,20 +20,6 @@ def buildBack() {
     echo "building of the backend part successful..."
     }
 } 
-def testFront() {
-    dir ('../mern-app/frontend/') { 
-    sh 'ng test'
-    echo "testing of the frontend part successful ..."
-    }
-} 
-
-def testBack() {
-    dir ('../mern-app/Backend/') { 
-    //sh 'node index.js'
-    echo "testing of the backend part successful..."
-    }
-
-} 
 
 def buildImage() {
     echo "building the docker image"
