@@ -6,9 +6,9 @@ def buildFront() {
     sh 'pwd'
     dir ('../mern-app/frontend/') { 
     sh 'pwd'
-    sh 'npm cache clean -force'
-    sh "npm install"
-    sh "npm install -g @angular/cli"
+    //sh 'npm cache clean -force'
+    //sh "npm install"
+    //sh "npm install -g @angular/cli"
     echo "building of the frontend part successful ..."
     }
 } 
@@ -16,7 +16,7 @@ def buildFront() {
 def buildBack() {
     
     dir ('../mern-app/Backend/') { 
-    sh 'npm install'
+    //sh 'npm install'
     echo "building of the backend part successful..."
     }
 } 
