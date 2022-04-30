@@ -27,7 +27,7 @@ def buildImage() {
     //sh 'sudo service start docker'
 
     //withCredentials([usernamePassword(credentialsId: 'docker_hub_repo', usernameVariable: 'USER', passwordVariable: 'PASS')]){
-    sh 'sudo docker build -t tsah007/bootcamp:jma-1.1 .'
+    sh 'docker build -t tsah007/bootcamp:jma-1.1 .'
     //sh "docker login -u ${USER} -p ${PASS}"
     //sh 'docker push tsah007/bootcamp:jma-1.1'
     }
