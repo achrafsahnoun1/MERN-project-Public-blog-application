@@ -22,7 +22,6 @@ pipeline {
                     gv.buildFront()
                     gv.buildBack()
                     
-                    //gv.buildJar()
                 }
             }
         }
@@ -45,4 +44,4 @@ pipeline {
         }
     }
        
-    }   
+}
