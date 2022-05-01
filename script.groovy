@@ -24,7 +24,7 @@ def buildBack() {
 def buildImage() {
     echo "building the docker image"
     dir ('../mern-app/frontend/') { 
-    sh 'rm -rf package-lock.json'
+    sh 'rm -rf package-lock.json node_modules'
     sh 'pwd'
     //withCredentials([usernamePassword(credentialsId: 'docker_hub_repo', usernameVariable: 'USER', passwordVariable: 'PASS')]){
     sh 'docker build -t frontend .'
