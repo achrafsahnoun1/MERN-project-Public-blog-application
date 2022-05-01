@@ -6,9 +6,9 @@ def buildFront() {
     sh 'pwd'
     dir ('../mern-app/frontend/') { 
     sh 'pwd'
-    //sh 'npm cache clean -force'
-    //sh "npm install"
-    //sh "npm install -g @angular/cli"
+    sh 'npm cache clean -force'
+    sh "npm install"
+    sh "npm install -g @angular/cli"
     echo "building of the frontend part successful ..."
     }
 } 
@@ -24,7 +24,7 @@ def buildBack() {
 def buildImage() {
     echo "building the docker image"
     dir ('../mern-app/frontend/') { 
-    sh 'rm -rf package-lock.json node_modules'
+    sh 'rm -rf node_modules'
     sh 'pwd'
     //withCredentials([usernamePassword(credentialsId: 'docker_hub_repo', usernameVariable: 'USER', passwordVariable: 'PASS')]){
     sh 'docker build -t frontend .'
