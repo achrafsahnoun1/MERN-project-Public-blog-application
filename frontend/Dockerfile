@@ -6,7 +6,7 @@ WORKDIR '/app'
 COPY package.json .
 RUN pwd
 RUN npm cache clean -force
-RUN npm ci
+RUN npm install
 RUN npm install -g @angular/cli
 
 COPY . .
