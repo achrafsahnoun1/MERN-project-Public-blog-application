@@ -25,7 +25,7 @@ def buildImage() {
     echo "building the docker image"
     dir ('../mern-app/frontend/') { 
     //withCredentials([usernamePassword(credentialsId: 'docker_hub_repo', usernameVariable: 'USER', passwordVariable: 'PASS')]){
-    sh 'docker build -t tsah:1.1 .'
+    //sh 'docker build -t tsah:1.1 .'
     //sh "docker login -u ${USER} -p ${PASS}"
     //sh 'docker push tsah007/bootcamp:jma-1.1'
     }
