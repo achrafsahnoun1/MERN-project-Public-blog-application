@@ -5,10 +5,10 @@ def buildJar() {
 def buildFront() { 
     sh 'pwd'
     dir ('../mern-app/frontend/') { 
-    sh 'pwd'
-    sh 'npm cache clean -force'
-    sh "npm install"
-    sh "npm install -g @angular/cli"
+    //sh 'pwd'
+    //sh 'npm cache clean -force'
+    //sh "npm install"
+    //sh "npm install -g @angular/cli"
     echo "building of the frontend part successful ..."
     }
 } 
