@@ -4,6 +4,7 @@ FROM node:12.20.0-alpine
 WORKDIR '/app'
 
 COPY package.json .
+RUN npm cache clean -force
 RUN npm install
 RUN npm install -g @angular/cli
 
