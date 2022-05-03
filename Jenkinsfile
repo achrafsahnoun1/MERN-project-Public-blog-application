@@ -19,8 +19,8 @@ pipeline {
             steps {
                 script{
                     
-                    //gv.buildFront()
-                    //gv.buildBack()
+                    gv.buildFront()
+                    gv.buildBack()
                     
                 }
             }

@@ -3,22 +3,26 @@ def buildJar() {
 } 
 
 def buildFront() { 
+  
+    """dir ('../mern-app/frontend/') { 
     sh 'pwd'
-    dir ('../mern-app/frontend/') { 
-    sh 'pwd'
+
     sh 'npm cache clean -force'
     sh "npm install"
     sh "npm install -g @angular/cli"
+    }"""
     echo "building of the frontend part successful ..."
-    }
+
 } 
 
 def buildBack() {
     
-    dir ('../mern-app/Backend/') { 
+    """dir ('../mern-app/Backend/') { 
+    sh 'pwd'
     sh 'npm install'
+    }"""
     echo "building of the backend part successful..."
-    }
+
 } 
 
 def buildfrontImage() {
