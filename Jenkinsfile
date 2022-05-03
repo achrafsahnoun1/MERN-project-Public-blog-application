@@ -1,6 +1,5 @@
 def gv
 pipeline {
-    //ahla
     agent any
     tools{
          nodejs 'node'
@@ -20,22 +19,21 @@ pipeline {
             steps {
                 script{
                     
-                    gv.buildFront()
-                    gv.buildBack()
+                    //gv.buildFront()
+                    //gv.buildBack()
                     
                 }
             }
         }
        
-        stage("Building the image") {
-            
+        stage("Building the image") {  
             steps {
                 script {
-                    gv.buildImage()
+                    gv.buildfrontImage()
+                    gv.buildbackImage()
                     }
                 }
             }
-        
         stage("deploy ") {
             steps {
                 script {
