@@ -12,15 +12,15 @@
     ignore_errors: yes
 
   - name: remove docker frontend image
-    command: docker rmi tsah007/mernapp_front:latest
+    command: docker rmi tsah007/mernapp_front:jma-1.0
     ignore_errors: yes
 
   - name: pull docker frontend image from dockerhub
-    command: docker pull tsah007/mernapp_front:latest
+    command: docker pull tsah007/mernapp_front:jma-1.0
 
   - name: create frontend container using simple-devops-image
-    command: docker run -d --name frontend-container -p 8080:8080 tsah007/mernapp_front:latest
-  
+    command: docker run -d --name frontend-container -p 8080:8080 tsah007/mernapp_front:jma-1.0
+
   - name: stop current running backend container
     command: docker stop backend-container
     ignore_errors: yes
@@ -30,11 +30,11 @@
     ignore_errors: yes
 
   - name: remove docker backend image
-    command: docker rmi tsah007/mernapp_back:latest
+    command: docker rmi tsah007/mernapp_back:jma-1.0
     ignore_errors: yes
 
   - name: pull docker backend image from dockerhub
-    command: docker pull tsah007/mernapp_back:latest
+    command: docker pull tsah007/mernapp_back:jma-1.0
 
   - name: create backend container using simple-devops-image
-    command: docker run -d --name backend-container -p 8080:8080 tsah007/mernapp_back:latest
+    command: docker run -d --name backend-container -p 8080:8080 tsah007/mernapp_back:jma-1.0
