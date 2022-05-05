@@ -2,13 +2,13 @@ version: '3'
 services:
 
   frontend:
-      name:  frontend-container
+      container_name:  frontend-container
       image: tsah007/mernapp_front:jma-1.0
       ports: 
         - "4200:4200"
 
   backend:
-      name: backend-container
+      container_name: backend-container
       image: tsah007/mernapp_back:jma-1.0
       ports:
         - "3000:3000"
