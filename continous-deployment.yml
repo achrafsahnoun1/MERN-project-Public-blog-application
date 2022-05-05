@@ -39,4 +39,4 @@
  # - name: create backend container using simple-devops-image
  #   command: docker run -d --name backend-container -p 3000:3000 tsah007/mernapp_back:jma-1.0
   - name: run docker compose file to run the frontend and backend containers
-    command: docker-compose -d -f /home/ansadmin/docker-compose.yaml up 
+    command: docker-compose  -f /home/ansadmin/docker-compose.yaml up -d
