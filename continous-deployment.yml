@@ -1,0 +1,40 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+  - name: stop current running frontend container
+    command: docker stop frontend-container
+    ignore_errors: yes
+
+  - name: remove stopped frontend container
+    command: docker rm frontend-container
+    ignore_errors: yes
+
+  - name: remove docker frontend image
+    command: docker rmi tsah007/mernapp_front:latest
+    ignore_errors: yes
+
+  - name: pull docker frontend image from dockerhub
+    command: docker pull tsah007/mernapp_front:latest
+
+  - name: create frontend container using simple-devops-image
+    command: docker run -d --name frontend-container -p 8080:8080 tsah007/mernapp_front:latest
+  
+  - name: stop current running backend container
+    command: docker stop backend-container
+    ignore_errors: yes
+
+  - name: remove stopped backend container
+    command: docker rm backend-container
+    ignore_errors: yes
+
+  - name: remove docker backend image
+    command: docker rmi tsah007/mernapp_back:latest
+    ignore_errors: yes
+
+  - name: pull docker backend image from dockerhub
+    command: docker pull tsah007/mernapp_back:latest
+
+  - name: create backend container using simple-devops-image
+    command: docker run -d --name backend-container -p 8080:8080 tsah007/mernapp_back:latest
