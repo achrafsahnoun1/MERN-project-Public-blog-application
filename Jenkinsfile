@@ -43,6 +43,7 @@ pipeline {
                         sh "ssh -v -o StrictHostKeyChecking=no ec2-user@172.31.19.20"
                         withCredentials([usernamePassword(credentialsId: 'ansible-ansadmin-user',usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                         sh "su ansadmin sh -u ${USERNAME} -p ${PASSWORD} --password-stdin"}
+                        echo "khra"
                     }
                 }
             }
