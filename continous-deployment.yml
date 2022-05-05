@@ -18,8 +18,8 @@
   - name: pull docker frontend image from dockerhub
     command: docker pull tsah007/mernapp_front:jma-1.0
 
-  - name: create frontend container using simple-devops-image
-    command: docker run -d --name frontend-container -p 4200:4200 tsah007/mernapp_front:jma-1.0
+ # - name: create frontend container using simple-devops-image
+ #   command: docker run -d --name frontend-container -p 4200:4200 tsah007/mernapp_front:jma-1.0
 
   - name: stop current running backend container
     command: docker stop backend-container
@@ -36,5 +36,7 @@
   - name: pull docker backend image from dockerhub
     command: docker pull tsah007/mernapp_back:jma-1.0
 
-  - name: create backend container using simple-devops-image
-    command: docker run -d --name backend-container -p 3000:3000 tsah007/mernapp_back:jma-1.0
+ # - name: create backend container using simple-devops-image
+ #   command: docker run -d --name backend-container -p 3000:3000 tsah007/mernapp_back:jma-1.0
+  - name: run docker compose file to run the frontend and backend containers
+    command: docker-compose -f docker-compose.yaml up 
