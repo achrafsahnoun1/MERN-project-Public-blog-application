@@ -32,7 +32,7 @@ def buildfrontImage() {
     sh 'pwd'
     withCredentials([usernamePassword(credentialsId: 'docker-hub-repo', usernameVariable: 'USER', passwordVariable: 'PASS')]){
     sh 'docker build -t tsah007/mernapp_front:jma-1.0 .'
-    sh "docker login -u ${USER} -p ${PASS}"
+    sh "docker login -u ${USER} -p ${PASS} --password-stdin"
     sh 'docker push tsah007/mernapp_front:jma-1.0'
     }
 }

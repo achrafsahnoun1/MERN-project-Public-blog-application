@@ -34,10 +34,14 @@ pipeline {
                     }
                 }
             }
-        stage("deploy ") {
+        stage("copying files to ansible server ") {
             steps {
                 script {
-                    gv.deployApp()
+                    //gv.deployApp()
+                    echo "copying files to ansible server"
+                    sshagent(['ansible-server']){
+                        sh "scp -o StrictHostKeyChecking=no readmi.txt ansadmin@172.31.19.20:/ansadmin"
+                    }
                 }
             }
         }
