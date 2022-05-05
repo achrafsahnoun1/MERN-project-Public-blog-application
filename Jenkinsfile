@@ -40,10 +40,11 @@ pipeline {
                     //gv.deployApp()
                     echo "copying files to ansible server"
                     sshagent(['ansible-server']){
-                        sh "scp -o StrictHostKeyChecking=no readmi.txt ansadmin@172.31.19.20:/ansadmin"
+                        sh "scp -o StrictHostKeyChecking=no /home/ec2-user/readmi.txt ansadmin@172.31.19.20:/ansadmin"
                     }
                 }
             }
+    
         }
     }
        
