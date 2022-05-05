@@ -41,7 +41,7 @@ pipeline {
                     echo "copying files to ansible server"
                     sshagent(['ansible-server']){
                         sh "ssh -v -o StrictHostKeyChecking=no ec2-user@172.31.19.20"
-                        withCredentials([usernamePassword(credentialsId: 'ansible-ansadmin-user', usernameVariable: 'USER2', passwordVariable: 'PASS2')]){
+                        withCredentials([usernamePassword(credentialsId: 'ansible-ansadmin-user', passwordVariable: 'PASS2')]){
                         sh "su ansadmin sh -u ${USER2} -p ${PASS2} --password-stdin"}
                     }
                 }
