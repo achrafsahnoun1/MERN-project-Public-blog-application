@@ -7,6 +7,6 @@ services:
         - "4200:4200"
 
   backend:
-      image: tsah007/mernapp_front:jma-1.0
+      image: tsah007/mernapp_back:jma-1.0
       ports:
         - "3000:3000"
