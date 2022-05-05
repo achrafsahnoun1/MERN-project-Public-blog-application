@@ -42,7 +42,7 @@ pipeline {
                     sshagent(['ansible-server']){
                         sh "ssh -v -o StrictHostKeyChecking=no ec2-user@172.31.19.20"
                         withCredentials([usernamePassword(credentialsId: 'ansible-ansadmin-user', passwordVariable: 'PASS2')]){
-                        sh "su ansadmin sh -u ${USER2} -p ${PASS2} --password-stdin"}
+                        sh "su ansadmin sh -p ${PASS2} --password-stdin"}
                     }
                 }
             }
