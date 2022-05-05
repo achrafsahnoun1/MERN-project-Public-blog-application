@@ -40,7 +40,7 @@ pipeline {
                     //gv.deployApp()
                     echo "copying files to ansible server"
                     sshagent(['ansible-server']){
-                        sh "ssh -v -o StrictHostKeyChecking=no ansadmin@172.31.19.20"
+                        sh "ssh -v -o StrictHostKeyChecking=no ec2-user@172.31.19.20"
                     }
                 }
             }
