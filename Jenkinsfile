@@ -40,7 +40,7 @@ pipeline {
                     //gv.deployApp()
                     echo "copying files to ansible server"
                     sshagent(['ansible-server']){
-                        def runplaybook = 'ansible-playbook -i /home/ansadmin/hosts /home/ansadmin/continous-deployment.yml'
+                        def runplaybook = 'ansible-playbook -i /home/ansadmin/hosts -i /home/ansadmin/docker-compose.yaml /home/ansadmin/continous-deployment.yml'
                         withCredentials([usernamePassword(credentialsId: 'ansible-ansadmin-user',usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                         sh "sshpass -p ${PASSWORD} scp -v -o StrictHostKeyChecking=no continous-deployment.yml ansadmin@172.31.19.20:/home/ansadmin  "
                         sh "sshpass -p ${PASSWORD} scp -v -o StrictHostKeyChecking=no docker-compose.yaml ansadmin@172.31.19.20:/home/ansadmin  "
