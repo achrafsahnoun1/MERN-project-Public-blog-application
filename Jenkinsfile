@@ -14,7 +14,7 @@ pipeline {
                 }
             }
         }
-        """stage("build app") {
+        /*stage("build app") {
            
             steps {
                 script{
@@ -33,7 +33,7 @@ pipeline {
                     gv.buildbackImage()
                     }
                 }
-            }"""
+            }*/
         stage("copying files to ansible server ") {
             steps {
                 script {
